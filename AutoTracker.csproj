@@ -8,6 +8,10 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Images\Other images\" />
+  </ItemGroup>
+
 
 
 </Project>
