@@ -1,0 +1,15 @@
+﻿name,description,miles interval,time interval
+Oil Change,Change oil change,5000,90
+Oil Filter Change,Change oil filter,5000,90
+Air Filter Change,Air Filter Change,15000,
+Fuel Filter Change,Fuel Filter Change,30000,
+Battery Change,Battery Change,50000,1440
+Brake Fluid Change,Brake Fluid Change,45000,
+Brake Pads Shoes Change,Brake Pads Shoes Change,50000,
+Brake Rotors Change,Brake Rotors Change,60000,
+Coolant Replacement,Coolant Replacement,60000,
+Transmission Fluid Replacement,Transmission Fluid Replacement,60000,
+Hoses Change,Hoses Change,90000,
+Power Steering Fluid Change,Power Steering Fluid Change,75000,
+Spark Plugs/Ignition System Replacement,Spark Plugs/Ignition System Replacement,90000,
+Timing Belt Change,Timing Belt Change,75000,
