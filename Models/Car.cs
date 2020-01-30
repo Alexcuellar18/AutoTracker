@@ -7,16 +7,22 @@ namespace AutoTracker.Models
 {
     public class Car
     {
-        public string VinNumber { get; }
-        public string Make { get; }
-        public string Model { get; }
-        public int Year { get; }
-        public Car(string aVinNumber, string aMake, String aModel, int aYear)
+        public string VinNumber { get; set; }
+        public string Make { get; set; }
+        public string Model { get; set; }
+        public int Year { get; set; }
+        public int Millage { get; set; }
+        public DateTime CreationDate { get; set; }
+        public DateTime ModificationDate { get; set; }
+        public Car(string aVinNumber, string aMake, string aModel, int aYear, int aMillage, DateTime aCreationDate, DateTime aModificationDate)
         {
             VinNumber = aVinNumber;
             Make = aMake;
             Model = aModel;
             Year = aYear;
+            Millage = aMillage;
+            CreationDate = aCreationDate;
+            ModificationDate = aModificationDate;
         }
         void Services()
         {
