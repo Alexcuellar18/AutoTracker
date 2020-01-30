@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace UserSignup.ViewModels
+namespace AutoTracker.ViewModels
 {
     public class AddUserViewModel
     {

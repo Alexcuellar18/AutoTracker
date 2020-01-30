@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+@if (@ViewBag.user != null)
+{
+    Console.WriteLine("We don't have any user yet");
+}
+else
+{
+    <h1>Index</h1>
+    <p>
+
+        @Console.WriteLine(@ViewBag.message);
+
+
+        @Console.WriteLine(@ViewBag.user.username);;
+    </p>
+}
+
+
+
