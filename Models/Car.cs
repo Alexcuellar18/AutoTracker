@@ -34,8 +34,11 @@ namespace AutoTracker.Models
             Model = aModel;
             Year = aYear;
             Millage = aMillage;
-            CreationDate = aCreationDate;
-            ModificationDate = aModificationDate;
+        }
+
+        public Car()
+        {
+
         }
 
         void Services()
