@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using AutoTracker.Models;
 
-namespace UserSignup.Controllers
+namespace AutoTracker.Controllers
 {
     public class UserController : Controller
     {
@@ -17,7 +17,7 @@ namespace UserSignup.Controllers
         public IActionResult Add(User user, string verify)
         {
             ViewBag.user = user;
-            string message = validate(user, verify);
+            string message = Validate(user, verify);
             ViewBag.message = message;
             if (user.Password == verify)
             {
@@ -27,7 +27,7 @@ namespace UserSignup.Controllers
                 return Redirect("Index");
         }
 
-        private static string validate(User user, string verify)
+        private static string Validate(User user, string verify)
         {
 
             string answer = "";
