@@ -14,31 +14,39 @@ namespace AutoTracker.Controllers
             return View();
         }
         
+        //Action GET  where the future user land to register
+        public IActionResult Add()
+        {
+            return View();
+        }
+
+
+        //Action POST when the user tries to register
+        [HttpPost]
         public IActionResult Add(User user, string verify)
         {
             ViewBag.user = user;
             string message = Validate(user, verify);
             ViewBag.message = message;
-            if (user.Password == verify)
+            if (message == null)
+            {
+                return Redirect("/Home/HomePage");//if user is validated send to page after login
+            }
+            else
             {
                 return View();
             }
-            else
-                return Redirect("Index");
         }
 
         private static string Validate(User user, string verify)
         {
 
-            string answer = "";
+            string answer =  null;
             if (user.Password != null || verify != null)
             {
-                if (user.Password == verify)
+                if (user.Password != verify)
                 {
-                    answer = ("Welcome {0}" + user.Username);
-                }
-                else
-                {
+
                     answer = ("The password cannot be verified");
                 };
             }
