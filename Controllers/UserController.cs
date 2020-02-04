@@ -4,13 +4,16 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using AutoTracker.Models;
+using AutoTracker.ViewModels;
 
 namespace AutoTracker.Controllers
 {
     public class UserController : Controller
     {
+        static private List<string> Users = new List<string>();
         public IActionResult Index()
         {
+            
             return View();
         }
         
@@ -18,17 +21,15 @@ namespace AutoTracker.Controllers
         public IActionResult Add()
         {
             return View();
+            
         }
 
 
         //Action POST when the user tries to register
         [HttpPost]
-        public IActionResult Add(User user, string verify)
+        public IActionResult Add(AddUserViewModel addUserViewModel)
         {
-            ViewBag.user = user;
-            string message = Validate(user, verify);
-            ViewBag.message = message;
-            if (message == null)
+            if (ModelState.IsValid)
             {
                 return Redirect("/Home/HomePage");//if user is validated send to page after login
             }
@@ -36,6 +37,7 @@ namespace AutoTracker.Controllers
             {
                 return View();
             }
+
         }
 
         private static string Validate(User user, string verify)
