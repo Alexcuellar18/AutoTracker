@@ -23,7 +23,5 @@ namespace AutoTracker
                 {
                     webBuilder.UseStartup<Startup>();
                 });
-
-        Car car1 = new Car("V4466ffr6555", "Toyota", "Corolla", 2008, 105000);
     }
 }
