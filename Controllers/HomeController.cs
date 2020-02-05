@@ -23,6 +23,15 @@ namespace AutoTracker.Controllers
             return View();
         }
 
+        // Action for the main system page 
+        public IActionResult HomePage()
+        {
+            return View();
+        }
+
+
+
+
         public IActionResult Privacy()
         {
             return View();
