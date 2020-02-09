@@ -31,7 +31,7 @@ namespace AutoTracker.Controllers
         {
             if (ModelState.IsValid)
             {
-                return Redirect("/Home/HomePage");//if user is validated send to page after login
+                return Redirect("/Home/MainPage");//if user is validated send to the Apps Main Page 
             }
             else
             {
