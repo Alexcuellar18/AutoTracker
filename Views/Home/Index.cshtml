@@ -1,4 +1,5 @@
-﻿@{
+﻿@model AutoTracker.ViewModels.LogUserViewModel
+@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -9,8 +10,28 @@
         <img src="/images/lexus-rx.jpg" width="100%" />
     </div>
     <div class="col-lg-5 text-center">
-        <p><a href="User/login" class="btn btn-danger btn-sm">Existing User Login In</a></p>
-        <p><a href="User/Add" class="btn btn-danger btn-sm">New User Registration</a></p>
+        <div>
+            <p>
+                <form asp-controller="User" asp-action="Add" method="post">
+                    <div class="form-group">
+                        <label asp-for="Username"></label>
+                        <input class="form-control" asp-for="Username" />
+                        <span asp-validation-for="Username"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Password"></label>
+                        <input class="form-control" asp-for="Password" />
+                        <span asp-validation-for="Password"></span>
+                    </div>
+                    <div class="card-footer">
+                        <input class="btn btn-danger btn-sm" type="submit" value="Log Me In" />
+                    </div>
+
+                </form>
+            </p>
+        </div>
+
+        <p><a href="/User/Add" class="btn btn-danger btn-sm">New User Registration</a></p>
     </div>
 </div>
 

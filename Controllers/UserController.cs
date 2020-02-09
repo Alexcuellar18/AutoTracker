@@ -58,5 +58,23 @@ namespace AutoTracker.Controllers
             }
             return answer;
         }
+        
+        
+        
+        [HttpPost]
+        public IActionResult Login(LogUserViewModel logUserViewModel)
+        {
+            if (ModelState.IsValid)
+            {
+                return Redirect("/Home/MainPage");
+            }
+            else
+            {
+                return Redirect("/Home/Index");
+            }
+        }
+
+        
+
     }
 }
