@@ -7,12 +7,14 @@
 <!-- top picture -->
 <div class="row align-items-center my-5">
     <div class="col-lg-7">
+        
         <img src="/images/lexus-rx.jpg" width="100%" />
+        
     </div>
     <div class="col-lg-5 text-center">
         <div>
-            <p>
-                <form asp-controller="User" asp-action="Add" method="post">
+            
+                <form asp-controller="User" asp-action="Login" method="post">
                     <div class="form-group">
                         <label asp-for="Username"></label>
                         <input class="form-control" asp-for="Username" />
@@ -28,7 +30,7 @@
                     </div>
 
                 </form>
-            </p>
+           
         </div>
 
         <p><a href="/User/Add" class="btn btn-danger btn-sm">New User Registration</a></p>
