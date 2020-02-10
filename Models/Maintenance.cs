@@ -7,10 +7,12 @@ namespace AutoTracker.Models
 {
     public class Maintenance
     {
-        public string ServiceDescription { get; set; }
-        public double ServiceCost { get; set; }
+        public string MaintenanceName{ get; set; }
+        public double MaintenanceDescription { get; set; }
 
-        public DateTime ServiceDate { get; set; }
+        public int MilesInterval { get; set; }
+
+        public DateTime TimeInterval { get; set; }
 
 
 
