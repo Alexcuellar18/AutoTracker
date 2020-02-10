@@ -1,51 +1,95 @@
 ﻿
 @model AutoTracker.ViewModels.AddUserViewModel
-@{ 
+@{
     ViewData["Title"] = "Add";
 }
 
-<h1>Add</h1>
-<form asp-controller="User" asp-action="Add" method="post">
-    <div class="form-group">
-        <label asp-for="Username"></label>
-        <input class="form-control" asp-for="Username" />
-        <span asp-validation-for="Username"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Name"></label>
-        <input class="form-control" asp-for="Name" />
-        <span asp-validation-for="Name"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="LastName"></label>
-        <input class="form-control" asp-for="LastName" />
-        <span asp-validation-for="LastName"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="ZipCode"></label>
-        <input class="form-control" asp-for="ZipCode" />
-        <span asp-validation-for="ZipCode"></span>
-    </div>
 
-    <div class="form-group">
-        <label asp-for="Email"></label>
-        <input class="form-control" asp-for="Email" />
-        <span asp-validation-for="Email"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Password"></label>
-        <input class="form-control" asp-for="Password" />
-        <span asp-validation-for="Password"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Verify"></label>
-        <input class="form-control" asp-for="Verify" />
-        <span asp-validation-for="Verify"></span>
-    </div>
-    <div class="card-footer">
-        <input class="btn btn-danger btn-sm" type="submit" value="Create My Account" />
+<!-- top picture -->
+<div class="row align-items-center my-5">
+    <div class="col-lg-7">
 
-       
+        <h2>Create your own AutoTracker account</h2>
+        <p>
+            With Autotracker you will be allow to track<br />
+
+            <ul>
+                <li>Maintenance history of your car</li>
+                <li>Modification history of your car</li>
+                <li>Track all your cars history in one place</li>
+            </ul>
+        </p>
+        <p>
+            If you are already a member, please Log-in<br />
+
+            <a href="/Home/Index" class="btn btn-danger btn-sm">Go to Login Page</a>
+        </p>
+
     </div>
-</form>
+    <div class="col-lg-5 text-center">
+        <div>
+            <br />
+            <br />
+            <h4>New User Registration</h4>
+            <br />
+
+            <form asp-controller="User" asp-action="Add" method="post">
+                <div class="form-group">
+                    <label asp-for="Username"></label>
+                    <input class="form-control" asp-for="Username" />
+                    <span asp-validation-for="Username"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Name"></label>
+                    <input class="form-control" asp-for="Name" />
+                    <span asp-validation-for="Name"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="LastName"></label>
+                    <input class="form-control" asp-for="LastName" />
+                    <span asp-validation-for="LastName"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="ZipCode"></label>
+                    <input class="form-control" asp-for="ZipCode" />
+                    <span asp-validation-for="ZipCode"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Email"></label>
+                    <input class="form-control" asp-for="Email" />
+                    <span asp-validation-for="Email"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Password"></label>
+                    <input class="form-control" asp-for="Password" />
+                    <span asp-validation-for="Password"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Verify"></label>
+                    <input class="form-control" asp-for="Verify" />
+                    <span asp-validation-for="Verify"></span>
+                </div>
+                <div class="card-footer">
+                    <input class="btn btn-danger btn-sm" type="submit" value="Create My Account" />
+
+
+                </div>
+            </form>
+
+        </div>
+
+
+
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+    <p> When you create an autoTracker account you accept our privacy policy</p>
 
