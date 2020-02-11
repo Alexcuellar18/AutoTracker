@@ -24,7 +24,7 @@ namespace AutoTracker.Controllers
         }
 
         // Action for the main system page 
-        public IActionResult HomePage()
+        public IActionResult MainPage()
         {
             return View();
         }
