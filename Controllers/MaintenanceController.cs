@@ -22,7 +22,7 @@ namespace AutoTracker.Controllers
             return View();
         }
 
-        public IActionResult Add()
+       // public IActionResult Add()
 
 
 
