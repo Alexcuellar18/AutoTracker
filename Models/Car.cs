@@ -7,25 +7,14 @@ namespace AutoTracker.Models
 {
     public class Car
     {
-        public string VinNumber { get; }
-        public string Make { get; }
-        public string Model { get; }
-        public int Year { get; }
-        public Car(string aVinNumber, string aMake, String aModel, int aYear)
-        {
-            VinNumber = aVinNumber;
-            Make = aMake;
-            Model = aModel;
-            Year = aYear;
-        }
-        //need for functionalities
-        void Services()
-        {
-            Console.WriteLine("function for automobile's services will go here");
-        }
-        void Performance()
-        {
-            Console.WriteLine("Function for automobile performance will go here");
-        }
+        public int ID { get; set; }
+        public string VinNumber { get; set; }
+        public string Make { get; set; }
+        public string Model { get; set; }
+        public int Year { get; set; }
+        public int CategoryID { get; set; }
+        public CarCategory Category { get; set; }
+        public IList<CarList> CarLists { get; set; }
+       
     }
 }
