@@ -1,7 +1,5 @@
-﻿using System;
+﻿
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using AutoTracker.Models;
 using AutoTracker.ViewModels;
@@ -10,7 +8,7 @@ namespace AutoTracker.Controllers
 {
     public class UserController : Controller
     {
-        static private List<string> Users = new List<string>();
+        
         public IActionResult Index()
         {
             
@@ -31,7 +29,7 @@ namespace AutoTracker.Controllers
         {
             if (ModelState.IsValid)
             {
-                return Redirect("/Home/HomePage");//if user is validated send to page after login
+                return Redirect("/Home/MainPage");//if user is validated send to the  Main Page
             }
             else
             {
@@ -39,24 +37,22 @@ namespace AutoTracker.Controllers
             }
 
         }
-
-        private static string Validate(User user, string verify)
+        
+        
+        [HttpPost]
+        public IActionResult Login(LogUserViewModel logUserViewModel)
         {
-
-            string answer =  null;
-            if (user.Password != null || verify != null)
+            if (ModelState.IsValid)
             {
-                if (user.Password != verify)
-                {
-
-                    answer = ("The password cannot be verified");
-                };
+                return Redirect("/Home/MainPage");
             }
             else
             {
-                answer = "Password and verification need to be valid";
+                return View("../Home/Index", logUserViewModel);
             }
-            return answer;
         }
+
+        
+
     }
 }

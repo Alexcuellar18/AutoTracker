@@ -12,11 +12,16 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.1.0" />
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.1" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Images\Other images\" />
+    <None Include="wwwroot\images\General Page.jpg" />
+    <None Include="wwwroot\images\lexus-rx.jpg" />
+    <None Include="wwwroot\images\Main -Login Page.jpg" />
+    <None Include="wwwroot\images\Maintenance Item Page.jpg" />
+    <None Include="wwwroot\images\Maintenance Page.jpg" />
+    <None Include="wwwroot\images\Modification Page.jpg" />
   </ItemGroup>
 
 
