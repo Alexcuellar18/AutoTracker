@@ -6,20 +6,24 @@ namespace AutoTracker.Data
     public class AutoTrackerDbContext : DbContext
     {
         public DbSet<User> Users { get; set; }
-       // public DbSet<Maintenance> Maintenances { get; set; }
-      
+        public DbSet<Car> Cars { get; set; }
+        public DbSet<Maintenance> Maintenances { get; set; }
+        public DbSet<MaintenanceType> MaintenanceTypes { get; set; }
+        public DbSet<Mod> Mods { get; set; }
+
+        // public DbSet<Maintenance> Maintenances { get; set; }
+
 
         public AutoTrackerDbContext(DbContextOptions<AutoTrackerDbContext> options)
             : base(options)
         {
-            Database.EnsureCreatedAsync().Wait();
+           // Database.EnsureCreatedAsync().Wait();
         }
 
-        //protected override void OnModelCreating(ModelBuilder modelBuilder)
-        //{
-        //    modelBuilder.Entity<User>()
-        //        .HasKey(c => new { c.CheeseID, c.MenuID });
-        //}
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+
+        }
 
 
 
