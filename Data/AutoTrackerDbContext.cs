@@ -13,18 +13,14 @@ namespace AutoTracker.Data
 
         // public DbSet<Maintenance> Maintenances { get; set; }
 
-
         public AutoTrackerDbContext(DbContextOptions<AutoTrackerDbContext> options)
             : base(options)
-        {
-           // Database.EnsureCreatedAsync().Wait();
-        }
+        { }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 
         }
-
 
 
     }
