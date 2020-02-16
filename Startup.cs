@@ -31,6 +31,16 @@ namespace AutoTracker
 
 
             services.AddControllersWithViews();
+
+            services.AddSession(options => {
+                options.IdleTimeout = TimeSpan.FromMinutes(90);
+                options.Cookie.HttpOnly = true;
+                options.Cookie.IsEssential = true;
+                options.Cookie.Name = "AutoTrackerSession";
+
+                
+
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -52,6 +62,7 @@ namespace AutoTracker
             app.UseRouting();
 
             app.UseAuthorization();
+            app.UseSession();
 
             app.UseEndpoints(endpoints =>
             {
