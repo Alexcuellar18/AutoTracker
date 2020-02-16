@@ -5,6 +5,7 @@ using AutoTracker.Models;
 using AutoTracker.ViewModels;
 using AutoTracker.Data;
 using Microsoft.AspNetCore.Http;
+using System.Linq;
 
 namespace AutoTracker.Controllers
 {
@@ -67,7 +68,19 @@ namespace AutoTracker.Controllers
         {
             if (ModelState.IsValid)
             {
-                return Redirect("/Home/MainPage");
+                User theUser = context.Users.Where(x => x.Username == logUserViewModel.Username
+                                                && x.Password == logUserViewModel.Password).FirstOrDefault();
+                if (theUser !=null)
+                {
+                    HttpContext.Session.SetInt32("userID", theUser.ID);
+                    return Redirect("/Home/MainPage");
+                }
+                else
+                {
+                    ViewBag.errors = "The username or password DO NOT exist, please try again";
+                    return View("../Home/Index", logUserViewModel);
+                }
+ 
             }
             else
             {

@@ -33,7 +33,14 @@
                     <input class="btn btn-danger btn-sm" type="submit" value="Login" />
                 </div>
 
+                @if (ViewBag.errors != null)
+                {
+                    <p>@ViewBag.errors</p>
+                }
+
             </form>
+
+
 
         </div>
         <p>
