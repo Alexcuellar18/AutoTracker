@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using AutoTracker.Models;
+using Microsoft.AspNetCore.Http;
 
 namespace AutoTracker.Controllers
 {
@@ -26,6 +27,8 @@ namespace AutoTracker.Controllers
         // Action for the main system page 
         public IActionResult MainPage()
         {
+            var userID = HttpContext.Session.GetInt32("userID");
+
             return View();
         }
 

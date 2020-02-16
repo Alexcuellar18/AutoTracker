@@ -17,7 +17,12 @@ namespace AutoTracker.ViewModels
 
         [Display(Name = "Last Name")]
         public string LastName { get; set; }
-       
+
+        [Display(Name = "Phone Number")]
+        [RegularExpression(@"^[0-9]{10}$",
+         ErrorMessage = "Characters are not allowed.")]
+        public string PhoneNumber { get; set; }
+
         [Required]
         public string Password { get; set; }
 
