@@ -10,10 +10,10 @@ namespace AutoTracker.Models
         public int ID { get; set; }
         public User User { get; set; }
         public int UserID { get; set; }
-        public string VinNumber { get; }
-        public string Make { get; }
-        public string Model { get; }
-        public int Year { get; }
+        public string VinNumber { get; set; }
+        public string Make { get; set; }
+        public string Model { get; set; }
+        public int Year { get; set; }
         public int CurrentMiles { get; set; }
         public int NextMaintenanceMiles { get; set; }
         public int NextMaintenanceDays { get; set; }
